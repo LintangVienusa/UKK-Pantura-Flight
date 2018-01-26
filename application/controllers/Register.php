@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Form extends CI_Controller {
+class Register extends CI_Controller {
 
-	public function index()
+	public function sign_in()
 	{
 		$this->load->view('v_sign');
 	}

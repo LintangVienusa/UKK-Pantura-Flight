@@ -24,9 +24,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
 	<!-- Meta tag Keywords -->
 	<!-- css files -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo base_url();?>asset/sign/css/style.css" type="text/css" media="all">
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>asset/sign/css/font-awesome.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 	<!-- online-fonts -->
@@ -48,40 +48,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h2>Fill Here</h2>
 				<form action="#" method="post">
 					<div class="pom-agile">
-						<span class="fa fa-user-o" aria-hidden="true"></span>
-						<input placeholder="Full Name" name="fullname" class="user" type="text" required="">
+						<input placeholder="Full Name" name="name" class="pass" type="email" required="">
 					</div>
+
 					<div class="pom-agile">
-						<span aria-hidden="true"></span>
-						<input placeholder="Username" name="username" class="pass" type="text" required="">
+						<input placeholder="Username" name="usr" type="email" required="">
 					</div>
+					.
 					<div class="pom-agile">
-						<span aria-hidden="true"></span>
 						<input placeholder="Password" name="Password" class="pass" type="Password" required="">
 					</div>
-					<div class="sub-w3l">
-						<div class="sub-agile">
-							<input type="checkbox" id="brand1" value="">
-							<label for="brand1">
-								<span></span>Remember me</label>
-							</div>
-							<a href="#">Forgot Password?</a>
-							<div class="clear"></div>
-						</div>
-						<div class="right-w3l">
-							<input type="submit" value="Login">
-						</div>
-					</form>
-				</div>
+					.
+					<div class="pom-agile">
+						<input placeholder="Re-Type Password" name="Password" class="pass" type="Password" required="">
+					</div>
+					.
+					<div class="right-w3l">
+						<input type="submit" value="Register">
+					</div>
+				</form>
 			</div>
-			<!--//main-->
-			<!--footer-->
-			<div class="footer">
-				<p>&copy; 2018 Creative Login Form. All rights reserved | Design by
-					<a href="http://w3layouts.com">W3layouts</a>
-				</p>
-			</div>
-			<!--//footer-->
-		</body>
+		</div>
+		<!--//main-->
+		<!--footer-->
+		<div class="footer">
+			<p>&copy; 2018 Creative Login Form. All rights reserved | Design by
+				<a href="http://w3layouts.com">W3layouts</a>
+			</p>
+		</div>
+		<!--//footer-->
+	</body>
 
-		</html>
+	</html>
