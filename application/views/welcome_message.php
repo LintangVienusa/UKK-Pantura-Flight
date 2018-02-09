@@ -92,7 +92,7 @@
 				<div class="clearfix"> </div>	
 				<div class="resp-tabs-container">
 					<div class="tab-1 resp-tab-content roundtrip">
-						<form action="#" method="post">
+						<form action="<?php echo site_url(). '/lintang'; ?>" method="post">
 							<div class="from">
 								<h3>From</h3>
 								<input type="text" name="city" class="city1" placeholder="Type Departure City" required="">

@@ -248,13 +248,6 @@
               </a>
             </li>
             <!-- end task item -->
-          </ul>
-        </li>
-        <li class="footer">
-          <a href="#">View all tasks</a>
-        </li>
-      </ul>
-    </li>
     <!-- User Account: style can be found in dropdown.less -->
 
     <!-- Control Sidebar Toggle Button -->
@@ -317,84 +310,91 @@
   <section class="content-header">
     <h1>
       Dashboard
-      <small>User Data</small>
+      <small>Control panel</small>
     </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
   </section>
   <!-- MAIN CONTENT!!!! -->
   <section class="content">
-    <a class="btn btn-primary" href="<?php echo site_url("Crud/tambah"); ?>">INPUT DATA</a>
-    <table class="table">
-      <tr>
-        <th scope="col">No</th>
-        <th scope="col">ID</th>
-        <th scope="col">Username</th>
-        <th scope="col">Password</th>
-        <th scope="col">Fullname</th>
-        <th scope="col">Action</th>
-      </tr>
-      <?php 
-      $no = 1;
-      foreach($user as $u){ 
-        ?>
-        <tr>
-          <td><?php echo $no++ ?></td>
-          <td><?php echo $u->id ?></td>
-          <td><?php echo $u->username ?></td>
-          <td><?php echo $u->password ?></td>
-          <td><?php echo $u->fullname ?></td>
-          <td><a class="btn btn-warning" href="<?php echo base_url('index.php/crud/edit/'.$u->id); ?>">EDIT </a>
-              <a class="btn btn-danger" href="<?php echo base_url('index.php/crud/delete/'.$u->id); ?>">HAPUS</a> 
-          </td>
-        </tr>
-        <?php } ?>
-      </table>
-    </section>
-    
+    <center><?php echo anchor('crud/tambah','Tambah Data'); ?></center>
+  <table style="margin:20px auto;" border="1">
+    <tr>
+      <th>No</th>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Fullname</th>
+      <th>Level</th>
+      <th>Action</th>
+    </tr>
+    <?php 
+    $no = 1;
+    foreach($user as $u){ 
+    ?>
+    <tr>
+      <td><?php echo $no++ ?></td>
+      <td><?php echo $u->id ?></td>
+      <td><?php echo $u->username ?></td>
+      <td><?php echo $u->password ?></td>
+      <td><?php echo $u->name ?></td>
+      <td><?php echo $u->level ?></td>
+      <td>
+            <?php echo anchor('crud/edit/'.$u->id,'Edit'); ?>
+                              <?php echo anchor('crud/hapus/'.$u->id,'Hapus'); ?>
+      </td>
+    </tr>
+    <?php } ?>
+  </table>
+  </section>
+
+  
 
 
-
-    <!-- /.control-sidebar -->
+  <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
 
   <!-- ./wrapper -->
 
   <!-- jQuery 3 -->
-  <script src="../asset/admin/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
-  <script src="../asset/admin/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
     $.widget.bridge('uibutton', $.ui.button);
   </script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="../asset/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Morris.js charts -->
-  <script src="../asset/admin/bower_components/raphael/raphael.min.js"></script>
-  <script src="../asset/admin/bower_components/morris.js/morris.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/raphael/raphael.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/morris.js/morris.min.js"></script>
   <!-- Sparkline -->
-  <script src="../asset/admin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
   <!-- jvectormap -->
-  <script src="../asset/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="../asset/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
   <!-- jQuery Knob Chart -->
-  <script src="../asset/admin/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
   <!-- daterangepicker -->
-  <script src="../asset/admin/bower_components/moment/min/moment.min.js"></script>
-  <script src="../asset/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/moment/min/moment.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
   <!-- datepicker -->
-  <script src="../asset/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <!-- Bootstrap WYSIHTML5 -->
-  <script src="../asset/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
   <!-- Slimscroll -->
-  <script src="../asset/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
   <!-- FastClick -->
-  <script src="../asset/admin/bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/bower_components/fastclick/lib/fastclick.js"></script>
   <!-- AdminLTE App -->
-  <script src="../asset/admin/dist/js/adminlte.min.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="../asset/admin/dist/js/pages/dashboard.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/dist/js/pages/dashboard.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="../asset/admin/dist/js/demo.js"></script>
+  <script src="http://localhost:8020/lat_ukk/asset/admin/dist/js/demo.js"></script>
 </body>
 </html>

@@ -46,21 +46,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="main-content-agile">
 			<div class="sub-main-w3">
 				<h2>Fill Here</h2>
-				<form action="#" method="post">
+				<form action="<?php echo base_url(). 'index.php/register/input'; ?>" method="post">
 					<div class="pom-agile">
-						<input placeholder="Full Name" name="name" class="pass" type="email" required="">
+						<input placeholder="Full Name" name="name" class="pass" type="text" required="">
 					</div>
 
 					<div class="pom-agile">
-						<input placeholder="Username" name="usr" type="email" required="">
+						<input placeholder="Username" name="usr" type="text" required="">
 					</div>
 					.
 					<div class="pom-agile">
-						<input placeholder="Password" name="Password" class="pass" type="Password" required="">
-					</div>
-					.
-					<div class="pom-agile">
-						<input placeholder="Re-Type Password" name="Password" class="pass" type="Password" required="">
+						<input placeholder="Password" name="password" class="pass" type="Password" required="">
 					</div>
 					.
 					<div class="right-w3l">
